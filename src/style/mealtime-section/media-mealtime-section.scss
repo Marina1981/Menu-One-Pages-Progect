@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px){
+    .mealtime-menubar {
+        grid-template-rows: minmax(auto, 50%)
+                            minmax(auto, 50%);
+        grid-template-columns:     repeat(6, minmax(auto, 16.66%));
+
+        grid-template-areas: "happy-hour-button-area happy-hour-button-area happy-hour-button-area  party-time-button-area  party-time-button-area  party-time-button-area"
+                             "breakfast-button-area breakfast-button-area  lunch-button-area       lunch-button-area       dinner-button-area      dinner-button-area";
+    }
+
+}
+
+/***************************************************************************************************/

@@ -1,0 +1,98 @@
+.comments-section {
+    &{
+    grid-area: comments;
+    min-height: 22rem;
+    /*min-width: 50rem;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 22rem;  }
+
+ /*------------------------------------------------------------------*/
+    &__comments-container{
+        display: grid;
+        grid-template-rows: minmax(auto, 20%)
+                            minmax(auto, 20%)
+                            minmax(auto, 20%)
+                            minmax(auto, 40%);
+        grid-template-columns:  minmax(auto, 9%)
+                                minmax(auto, 47%)
+                                minmax(auto, 6%)
+                                minmax(auto, 3%)
+                                minmax(auto, 32%)
+                                 minmax(auto, 3%);
+        grid-template-areas:     ".    comments-title-area     .     .    aboout-menu-title-area"
+                                 ".    comments-author-area    .     .    aboout-menu-text      "
+                                  ".    comments-text           .     .    aboout-menu-text      "
+                                  ".    .                       .     .    aboout-menu-text      ";
+        height: 15rem;
+        width: 67rem;
+        background: white;
+        outline: 0.3rem solid #e4e5e7;
+        min-height: 15rem;
+
+    }
+
+}
+/*********************************************************************************************/
+
+.comments-container{
+    &__comments-title{
+        grid-row:    1 / span 1;
+        grid-column: 2 / span 1;
+        font-family: "Aleo-Bold";
+        font-size: 1.5rem;
+        color: #f15a29;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    /*------------------------------------------------------------------*/
+    &__comments-author{
+        grid-row:    2 / span 1;
+        grid-column: 2 / span 1;
+        font-family: "Aleo-Bold";
+        font-size: 1.5rem;
+        color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*------------------------------------------------------------------*/
+    &__comments-text{
+        grid-row:    3 / span 1;
+        grid-column: 2 / span 1;
+        font-family: "MuseoSans_500";
+        font-size: 1.2rem;
+        color: gray;
+        text-align: center;
+
+    }
+    /*------------------------------------------------------------------*/
+    &__aboout-menu-title{
+        grid-row:    1 / span 1;
+        grid-column: 5 / span 1;
+        font-family: "Aleo-Bold";
+        font-size: 1.5rem;
+        color: #f15a29;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    /*------------------------------------------------------------------*/
+    &__aboout-menu-text{
+        grid-row:    2 / span 3;
+        grid-column: 5 / span 1;
+        font-family: "MuseoSans_500";
+        font-size: 1.2rem;
+        color: gray;
+        text-align: center;
+
+    }
+    /*------------------------------------------------------------------*/
+}
+
+
+
+
+

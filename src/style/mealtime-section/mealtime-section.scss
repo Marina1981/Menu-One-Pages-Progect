@@ -1,0 +1,156 @@
+.mealtime-menubar{
+
+    &{
+        grid-area: mealtime-menubar;
+        justify-self: stretch;
+        align-self:   stretch;
+
+
+        display: grid;
+
+        grid-template-rows: minmax(auto, 50%)
+                            minmax(auto, 50%);
+        grid-template-columns:      minmax(auto, 25%)
+                                    minmax(auto, 25%)
+                                    minmax(auto, 25%)
+                                    minmax(auto, 25%);
+        grid-template-areas: "happy-hour-button-area breakfast-button-area lunch-button-area dinner-button-area"
+                              "party-time-button-area breakfast-button-area lunch-button-area dinner-button-area";
+
+
+
+
+        overflow: hidden;/*****************/
+
+    }
+
+    /*********************************************/
+    /***   mealtime-menubar   buttons styles   ***/
+    /*********************************************/
+
+    &__menu-button{}
+
+    &__menu-button--active{}
+
+    &__menu-button--inactive{}
+
+    /*--------------------------------------------*/
+
+    &__menu-button--as-happy-hour-positioned{
+        grid-area: happy-hour-button-area;
+        justify-self: stretch;
+        align-self:   stretch;
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-happy-hour-decorated{
+        background: #e4e5e7;
+        font-family: "Aleo-Regular";
+        font-size: 2rem;
+        color: gray;
+        cursor: pointer;
+
+        display: flex;
+        align-items:     center;
+        justify-content: center;
+
+        border:0px;
+        transition: 0.3s;
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-happy-hour-decorated:hover{
+        color: white;
+    }
+
+    /*.............................................*/
+
+    &__menu-button--as-regular-meal-time-decorated{
+        font-family: "Aleo-Italic";
+        font-size: 2rem;
+        color: #e4e5e7;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:0px;
+        transition: 0.3s;
+        background-size: cover;
+        background-position: center;
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-regular-meal-time-decorated:hover{
+        color: #f15a29;
+    }
+
+    /*.............................................*/
+
+    &__menu-button--as-party-time-positioned{
+        grid-area: party-time-button-area;
+        justify-self: stretch;
+        align-self:   stretch;
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-party-time-decorated{
+        background: #f15a29;
+        font-family: "Aleo-Regular";
+        font-size: 2rem;
+        color: #e4e5e7;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:0px;
+        transition: 0.3s;
+
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-party-time-decorated:hover{
+        color: grey;
+    }
+
+    /*.............................................*/
+
+    &__menu-button--as-breakfast-positioned{
+        grid-area: breakfast-button-area;
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-breakfast-decorated{
+        background: url("./../images/Layer 3.png");
+    }
+
+    /*.............................................*/
+
+    &__menu-button--as-lunch-positioned{
+        grid-area: lunch-button-area;
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-lunch-decorated{
+        background: url("./../images/Layer 2.png");
+    }
+
+    /*.............................................*/
+
+    &__menu-button--as-dinner-positioned{
+        grid-area: dinner-button-area;
+    }
+    /*--------------------------------------------*/
+
+    &__menu-button--as-dinner-decorated{
+        background: url("./../images/dsfasgad.png");
+    }
+    /*********************************************/
+
+
+}
+
+
+
+

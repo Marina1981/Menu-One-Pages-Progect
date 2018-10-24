@@ -1,0 +1,22 @@
+@media screen and (max-width: 500px){
+    .menu-one-page{
+        grid-template-rows: minmax(auto, 20.04%)
+                            minmax(auto, 8.43%)
+                            minmax(auto, 34.49%)
+
+                            minmax(auto, 14.77%)
+                            minmax(auto, 10.89%)
+                            minmax(auto, 11.38%);
+
+
+
+        grid-template-areas:   "header"
+                                "mealtime-menubar"
+                                "meals-description"
+
+                                "comments"
+                                "order"
+                                "footer";
+
+    }
+}

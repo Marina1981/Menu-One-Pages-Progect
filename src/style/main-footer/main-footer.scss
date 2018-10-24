@@ -1,0 +1,172 @@
+.main-footer{
+    &{
+    grid-area: footer;
+    background-color: #f15a29;
+    justify-self: stretch;
+    align-self:   stretch;
+
+    display: grid;
+    grid-template-rows: minmax(auto, 19%)
+                        minmax(auto, 16%)
+                        minmax(auto, 15%)
+                        minmax(auto, 24%)
+                        minmax(auto, 16%)
+                        minmax(auto, 10%);
+    grid-template-columns:  minmax(auto, 43%)
+                            minmax(auto, 14%)
+                            minmax(auto, 43%);
+
+   }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__logo-container-mini{
+        grid-row:    2 / span 1;
+        grid-column: 2 / span 1;
+        justify-self: stretch;
+        align-self:   stretch;
+        width: 51px;
+        height: 44px;
+        background: url('./../images/css_sprites.png') -10px -10px;
+
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__footer-note{
+        grid-row:    3 / span 1;
+        grid-column: 2 / span 1;
+        font-family: "Raleway-Medium";
+        font-size: 1.3rem;
+        color: wheat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &__icon-refs-block{
+        grid-row:    4 / span 1;
+        grid-column: 2 / span 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &__copyright{
+        grid-row:    6 / span 1;
+        grid-column: 2 / span 1;
+        justify-self: stretch;
+        align-self:   stretch;
+        font-family: "Aleo-Regular";
+        font-size: 1.2rem;
+        color: brown;
+        display: flex;
+        align-content: center;
+        justify-content:center;
+        min-height: 4rem;
+        min-width: 12rem;
+
+    }
+    /*---------------------------------------------------------------------------*/
+
+}
+
+/*********************************************************************************/
+
+.logo-container-mini__logo-title{
+    grid-row:    2 / span 1;
+    grid-column: 2 / span 1;
+    justify-self: stretch;
+    align-self:   stretch;
+    font-family:"Aleo-Regular";
+    font-size: 2.5rem;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+/*---------------------------------------------------------------------------*/
+
+
+
+.icon-refs-block__clickable-icon-container{
+    display: flex;
+}
+/*---------------------------------------------------------------------------*/
+
+.reference__diamond-icon {
+    position: absolute;
+    left: 21px;
+    top: 11px;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    /* Rotate */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    border-radius: 0.3rem;
+}
+/*---------------------------------------------------------------------------*/
+
+.clickable-icon-container__reference{
+    position: relative;
+    width: 42px;
+    height:42px;
+
+}
+/*****************************************************************************/
+
+.reference {
+    &__facebook-logo {
+        position: absolute;
+        left: 16px;
+        top: 11px;
+        width: 8px;
+        height: 16px;
+        background: url('./../images/css_sprites.png')  -117px -10px;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__twitter-logo{
+        position: absolute;
+        left: 15px;
+        top: 14px;
+        width: 14px; height: 12px;
+        background: url('./../images/css_sprites.png') -10px -74px;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__bg-logo {
+        position: absolute;
+        left: 13px;
+        top: 12px;
+        width: 16px; height: 16px;
+        background: url('./../images/css_sprites.png') -81px -10px;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+
+}
+
+/***********************************************************************************/
+
+
+
+
+
+
+

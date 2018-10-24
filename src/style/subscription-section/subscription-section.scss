@@ -1,0 +1,147 @@
+.subscription-section{
+
+  &{
+    grid-area: order;
+    background: url("./../images/mediterranean-346997.png");
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-rows: minmax(auto, 30%)
+                        minmax(auto, 15%)
+                        minmax(auto, 25%)
+                        minmax(auto, 30%);
+    grid-template-columns: minmax(auto, 40%)
+                           minmax(auto, 47%)
+                           minmax(auto, 25%);
+    grid-template-areas:   ".      .                       ."
+                           ".      form-note-area          ."
+                           ".      form-subscription-area  ."
+                           ".      .                       .";
+    min-height: 15rem;
+
+  }
+  /*---------------------------------------------------------------------------*/
+
+  &__form-note{
+
+    grid-area: form-note-area;
+    align-items:  center;
+    justify-self: center;
+    font-family: "Aleo-Bold";
+    font-size: 2.35rem;
+    color: white;
+  }
+  /*---------------------------------------------------------------------------*/
+
+  &__form-subscription{
+
+    grid-area: form-subscription-area;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /*---------------------------------------------------------------------------*/
+}
+
+/**********************************************************************************/
+
+.form-subscriptions{
+
+  &__input-email{
+    height: 3rem;
+    width: 24rem;
+    background: rgba(255,255,255, 0.3);
+
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    font-family: "Aleo-Regular";
+    font-size: 1.7rem;
+    color:white;
+  }
+  /*---------------------------------------------------------------------------*/
+
+  &__input-email--animated{
+    animation:   flying-button  2s linear;
+  }
+  /*---------------------------------------------------------------------------*/
+
+  &__input-email::placeholder  {
+    color: white;
+    opacity:1 !important;
+
+  }
+  /*---------------------------------------------------------------------------*/
+
+  &__button-subscription{
+    height: 3rem;
+    width: 15rem;
+    background: #f15a29;
+    border: none;
+    border-radius: 0.3rem;
+    color: wheat;
+    font-family: "Aleo-Regular";
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  /*---------------------------------------------------------------------------*/
+
+  &__button-subscription--animated{
+    animation: floating-button 1s linear;
+  }
+  /*---------------------------------------------------------------------------*/
+
+}
+
+@keyframes floating-button
+{
+    15%
+    {
+        -webkit-transform: translateX(1rem);
+        transform: translateX(1rem);
+        background: #f15a29;
+    }
+    30%
+    {
+        -webkit-transform: translateX(-1rem);
+        transform: translateX(-1rem);
+        background: red;
+    }
+    50%
+    {
+        -webkit-transform: translateX(0.5rem);
+        transform: translateX(0.5rem);
+        background: #f15a29;
+    }
+    65%
+    {
+        -webkit-transform: translateX(-0.5rem);
+        transform: translateX(-0.5rem);
+        background: red;
+    }
+    80%
+    {
+        -webkit-transform: translateX(0.1rem);
+        transform: translateX(0.1rem);
+        background: #f15a29;
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        background: red;
+    }
+}
+
+
+/*****************/
+@keyframes flying-button {
+    from{ transform: scale(1,1) rotate(360deg);}
+    50% {  transform: scale(0.5,0.5) rotate(-360deg);}
+    to  { transform: scale(0,0) rotate(360deg);
+       }
+}
+/*---------------------------------------------------------------------------*/

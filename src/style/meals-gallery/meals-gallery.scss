@@ -1,0 +1,359 @@
+.meals-multi-carousel{
+
+    &-section{
+        grid-area: gallery;
+        background: url("./../images/picjumbo.com_foodiesfeed.com_DSC_0002.png");
+        background-size: cover;
+        background-position: center;
+        min-height: 35rem;
+        /*min-width: 80rem;*/
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*---------------------------------------------------------------------------*/
+    &{
+        background: white;
+        height: 25rem;
+        width:  66rem;
+
+        display: grid;
+        grid-template-rows: minmax(auto, 17%)
+                            minmax(auto, 83%);
+        grid-template-columns:  minmax(auto, 100%);
+
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__buttons-container{
+        grid-row:    1 / span 1;
+        grid-column: 1 / span 1;
+
+        display: grid;
+
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(auto, 25%);
+        grid-auto-rows:    minmax(auto,100%);
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &__carusel-choice-button {
+        background: #e4e5e7;
+        color: grey;
+        border: 0.1px solid grey;
+        font-family: "Aleo-Regular";
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__carusel-choice-button--active{
+        background: #f15a29;
+        color: white;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &__carusel-choice-button--inactive{
+        background: #e4e5e7;
+        color: grey;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__carusel-choice-button:hover{
+        color: #f15a29;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &__carusel-choice-button--active:hover{
+        color: white;
+    }
+    /*---------------------------------------------------------------------------*/
+}
+
+
+
+/***************************carousel************************************/
+
+.meal-carousel{
+
+    &{
+        grid-row:    2 / span 1;
+        grid-column: 1 / span 1;
+        align-self:   stretch;
+        justify-self: stretch;
+
+        display: grid;
+        grid-template-rows:    minmax(auto, 100%);
+        grid-template-columns: minmax(auto, 5%)
+                               minmax(auto, 1fr)
+                               minmax(auto, 5%);
+        align-items:     center;
+        justify-content: center;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &-front-box{
+        grid-row:    1 / span 1;
+        grid-column: 2 / span 1;
+        align-self: stretch;
+        justify-self: stretch;
+        overflow: hidden;
+    }
+    /*---------------------------------------------------------------------------*/
+}
+
+/**********************************************************************************/
+
+.slider-buttons-container{
+
+    &__slider-button{
+        border: none;
+        height: 90%;
+        width:    3.5rem;
+        font-size: 3rem;
+        display: flex;
+        align-items:     center;
+        align-content:   center;
+        justify-content: center;
+
+        position:relative;
+        cursor:  pointer;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__slider-button--active{
+        color: #f15a29;
+    }
+
+    /*---------------------------------------------------------------------------*/
+    &__slider-button--inactive{
+        color: grey;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &__left-button{
+        grid-row:    1 / span 1;
+        grid-column: 1 / span 1;
+        left: 1rem;
+        bottom: 1rem;
+    }
+    /*---------------------------------------------------------------------------*/
+    &__right-button{
+        grid-row:    1 / span 1;
+        grid-column: 3 / span 1;
+        left: -1rem;
+        bottom: 1rem;
+    }
+    /*---------------------------------------------------------------------------*/
+}
+
+/**********************************************************************************/
+
+.box-angle {
+    &{
+        border: solid #f15a29;
+        border-top-width: medium;
+        border-right-width: medium;
+        border-bottom-width: medium;
+        border-left-width: medium;
+        width:  0.8rem;
+        height: 0.8rem;
+        border-width: 0 0.25rem 0.25rem 0;
+        display: inline-block;
+        padding: 0;
+        background: transparent;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &_as-left-button {
+        transform: rotate(135deg) translateX(-0.5rem) translateY(-0.5rem);
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &_as-right-button{
+        transform: rotate(-45deg) translateX(-0.5rem) translateY(-0.5rem);
+    }
+    /*---------------------------------------------------------------------------*/
+}
+
+/*******************************************************************************/
+
+
+.meal-carousel-front-box{
+
+    &__gallery-container{
+        height: 100%;
+        width:  1000%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(auto, 3.33%);
+        grid-auto-rows:    minmax(auto,100%);
+
+        transition: margin-left 450ms;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &__gallery-container--inactive{
+        display: none;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &__gallery-container--active{
+        display: grid;
+
+    }
+}
+
+
+/***********************************************************************************/
+
+.meal-gallery-container__item-box{
+    display: grid;
+    grid-template-rows:    minmax(auto, 75%)
+                           minmax(auto, 25%);
+    grid-template-columns: minmax(auto, 100%);
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2.5rem;
+
+}
+/*---------------------------------------------------------------------------*/
+
+.meal-gallery-item-box__img-container{
+    grid-row:    1 / span 1;
+    grid-column: 1 / span 1;
+    align-self: stretch;
+    justify-self: stretch;
+}
+/*---------------------------------------------------------------------------*/
+
+.img-container{
+
+    &--chicken-burger-decorated{
+        background: url("./../images/Layer 10.png");
+        background-size: cover;
+
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    &--beef-burger-decorated{
+        background: url("./../images/Layer 11.png");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--chicken-pizza-decorated{
+        background: url("./../images/Layer 12.png");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--hot-dog-decorated{
+        background: url("./../images/hotdog.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--french-fries-decorated{
+        background: url("./../images/hqdefault.jpg");
+        background-size: cover;
+    }
+
+    /***************************************************/
+    /***************************************************/
+
+    &--juices-decorated{
+        background: url("./../images/sok.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--cocktails-decorated{
+        background: url("./../images/koktejli.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--hot-drinks-decorated{
+        background: url("./../images/s1200.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--milk-drinks-decorated{
+        background: url("./../images/milk.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--fruit-drinks-decorated{
+        background: url("./../images/mors.jpeg");
+        background-size: cover;
+    }
+
+    /*************************************************/
+    /***************************************************/
+
+    &--chicken-decorated{
+        background: url("./../images/kurica.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--chicken-wings-decorated{
+        background: url("./../images/chiken.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--chicken-cutlets-decorated{
+        background: url("./../images/kotleta.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--chicken-rolls-decorated{
+        background: url("./../images/thumb1.jpg");
+        background-size: cover;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    &--chicken-legs-decorated{
+        background: url("./../images/kurinie_nojki.jpg");
+        background-size: cover;
+    }
+    /*************************************************/
+    /***************************************************/
+    &--pilaf-decorated{
+        background: url("./../images/plov.jpg");
+        background-size: cover;
+    }
+    /************************************************/
+}
+
+/**************************************************************/
+
+.meal-gallery-item-box__img-caption{
+    grid-row:    2 / span 1;
+    grid-column: 1 / span 1;
+    font-family: "Aleo-Regular";
+    font-size: 1.2rem;
+    color: #f15a29;
+    margin: auto auto;
+}
+/*---------------------------------------------------------------------------*/
+
+
+
+
+
+

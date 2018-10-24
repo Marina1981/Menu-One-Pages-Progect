@@ -1,0 +1,45 @@
+@media screen and (max-width: 650px){
+    .meals-description-section{
+        grid-template-rows: minmax(auto, 20%)
+                            minmax(auto, 30%)
+                            minmax(auto, 25%)
+                            minmax(auto, 25%);
+
+        grid-template-columns:  minmax(auto, 100%);
+        grid-template-areas:    "meals-img-area     "
+                                " meals-article-area"
+                                "drinks-img-area    "
+                                "drinks-article-area";
+    }
+
+}
+
+/**************************************************************************************************/
+
+@media screen and (max-width: 650px){
+  .meals-description-container__article-title--decorated,
+  .meals-description-container__article-note--decorated,
+  .meals-description-container__article--decorated{
+    align-items: flex-start;
+  }
+
+}
+
+
+
+/***************************************************************************************************/
+@media screen and (max-width: 690px){
+  .meals-description-container__reference{
+    display: none;
+  }
+}
+/***************************************************************************************************/
+
+@media screen and (max-width: 690px){
+  .meals-description-container__article-note--as-food-container-configured,
+  .meals-description-container__article-note--as-drinks-container-configured{
+    align-items: flex-start;
+  }
+}
+
+

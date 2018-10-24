@@ -1,0 +1,497 @@
+
+/**********************************************************************************************/
+
+
+.meals-description-section {
+    grid-area: meals-description;
+    justify-self: stretch;
+    align-self: stretch;
+
+    display: grid;
+    grid-template-rows:     minmax(auto, 8.39%)
+                            minmax(auto, 37.1%)
+                            minmax(auto, 8.39%)
+                            minmax(auto, 37.1%)
+                            minmax(auto, 8.39%);
+
+    grid-template-columns:  minmax(auto, 12.07%)
+                            minmax(auto, 37.92%)
+                            minmax(auto, 37.92%)
+                            minmax(auto, 12.07%);
+    grid-template-areas:    ".                    .                     .                  .                "
+                            ".                    meals-img-area       meals-article-area  .                "
+                            ".                    .                     .                  .                "
+                            ".                    drinks-article-area  drinks-img-area     .                "
+                            ".                    .                     .                  .                ";
+
+
+    min-height: 85rem;
+
+
+    /*--------------------------------------------*/
+
+    &--active{
+        display: grid;
+    }
+
+    /*--------------------------------------------*/
+
+    &--inactive{
+        display: none;
+    }
+
+    /*--------------------------------------------*/
+
+    /*--------------------------------------------*/
+    /*---------section__horizontal-duplex-img-----*/
+    /*--------------------------------------------*/
+
+    &__horizontal-duplex-img-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background: white;
+        outline:        0.3rem solid #e4e5e7;
+        padding:        1.5rem;
+
+    }
+    /*--------------------------------------------*/
+
+    &__horizontal-duplex-img-container--as-food-positioned{
+        grid-area: meals-img-area;
+
+        justify-self: stretch;
+        align-self:   stretch;
+    }
+
+    /*--------------------------------------------*/
+}
+
+
+.horizontal-duplex-img-container{
+
+
+    &__part-img{
+        background-position: center;
+        width:      100%;
+        height:     auto;
+        min-height: 50%;
+    }
+
+    &__part-img--as-top-img#{&}__part-img--as-happy-hour-decorated{
+        background: url("./../images/Layer 5.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*---------------part-img--as-happy-hour-----------------------------*/
+
+    &__part-img--as-bottom-img#{&}__part-img--as-happy-hour-decorated{
+        background: url("./../images/Layer 6.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /*--------------------------------------------*/
+
+    /*--------------part-img--as-party-time------------------------------*/
+
+    &__part-img--as-top-img#{&}__part-img--as-party-time-decorated{
+        background: url("./../images/pizza.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /*--------------------------------------------*/
+
+    &__part-img--as-bottom-img#{&}__part-img--as-party-time-decorated{
+        background: url("./../images/fri.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*------------part-img--as-breakfast--------------------------------*/
+
+    &__part-img--as-top-img,
+    &__part-img--as-breakfast-decorated{
+        background: url("./../images/thumb1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*--------------------------------------------*/
+
+   &__part-img--as-bottom-img#{&}__part-img--as-breakfast-decorated{
+        background: url("./../images/kotletas.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*------------part-img--as-lunch--------------------------------*/
+
+   &__part-img--as-top-img#{&}__part-img--as-lunch-decorated{
+        background: url("./../images/kurinie_nojkis.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*--------------------------------------------*/
+
+     &__part-img--as-bottom-img#{&}__part-img--as-lunch-decorated{
+        background: url("./../images/sup.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /*---------------part-img--as-dinner-----------------------------*/
+
+    &__part-img--as-top-img#{&}__part-img--as-dinner-decorated{
+        background: url("./../images/Layer 6.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /*--------------------------------------------*/
+
+   &__part-img--as-bottom-img#{&}__part-img--as-dinner-decorated{
+        background: url("./../images/Layer 2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*--------------------------------------------*/
+
+}
+
+
+/*---------article_food-------------------------*/
+
+.meals-description-section__meals-description-container{
+    grid-area: meals-article-area;
+    align-self:   stretch;
+    justify-self: stretch;
+
+    display: grid;
+    grid-template-rows: minmax(auto,15.27%)
+                        minmax(auto,10.27%)
+                        minmax(auto,47.5%)
+                        minmax(auto,26.94%);
+    grid-template-columns:  minmax(auto,15%)
+                            minmax(auto,70%)
+                            minmax(auto,15%);
+
+    min-width: 18rem;
+}
+
+/*--------------------------------------------*/
+
+
+/***************************************************/
+/***  meals-description-container__article-title ***/
+/***************************************************/
+
+.meals-description-container{
+
+    &__article-title{
+        font-family: "Aleo-Bold";
+        font-size: 2.6rem;
+        color: grey;
+
+    }
+
+    /*--------------------------------------------*/
+
+    &__article-title--as-food-positioned{
+        grid-row:    1/ span 1;
+        grid-column: 2 / span 1;
+        align-self:   stretch;
+        justify-self: stretch;
+
+
+    }
+    /*--------------------------------------------*/
+
+    &__article-title--as-drinks-positioned{
+        grid-row:    1/ span 1;
+        grid-column: 2/ span 1;
+        align-self:   stretch;
+        justify-self: stretch;
+
+    }
+
+    /*--------------------------------------------*/
+
+    &__article-title--as-food-container-configured{
+        display: flex;
+        align-items:     flex-end;
+        justify-content: flex-start;
+    }
+    /*--------------------------------------------*/
+
+    &__article-title--as-drinks-container-configured{
+        display: flex;
+        align-items:     flex-end;
+        justify-content: flex-end;
+    }
+
+    /***************************************************/
+
+    /***************************************************/
+    /***  meals-description-container__article-note  ***/
+    /***************************************************/
+
+    &__article-note{
+        font-family: "Aleo-Bold";
+        font-size: 1.5rem;
+        color: gray;
+
+        min-height: 5rem;
+        min-width:  18rem;
+
+    }
+    /*--------------------------------------------*/
+
+    &__article-note--as-food-positioned{
+        grid-row:    2/ span 1;
+        grid-column: 2 / span 1;
+        justify-self: stretch;
+        align-self:   stretch;
+    }
+    /*--------------------------------------------*/
+
+    &__article-note--as-drinks-positioned{
+        grid-row:    2/ span 1;
+        grid-column: 2 / span 1;
+        justify-self: stretch;
+        align-self:   stretch;
+
+
+    }
+
+    /*--------------------------------------------*/
+
+    &__article-note--as-food-container-configured{
+        display: flex;
+        align-items:     flex-end;
+        justify-content: flex-start;
+    }
+    /*--------------------------------------------*/
+
+    &__article-note--as-drinks-container-configured{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    /***************************************************/
+
+    /***************************************************/
+    /***    meals-description-container__article     ***/
+    /***************************************************/
+
+    &__article{
+        font-family: "MuseoSans_500";
+        font-size: 1.1rem;
+        color: grey;
+
+        min-height: 12rem;
+    }
+    /*--------------------------------------------*/
+
+    &__article--as-food-positioned{
+        grid-row:    3/ span 1;
+        grid-column: 2 / span 1;
+        justify-self: stretch;
+        align-self:   stretch;
+
+    }
+    /*--------------------------------------------*/
+
+    &__article--as-drinks-positioned{
+        grid-row:    3/ span 1;
+        grid-column: 2 / span 1;
+        justify-self: stretch;
+        align-self:   stretch;
+
+    }
+    /*--------------------------------------------*/
+
+    &__article--as-food-container-configured{
+        display: flex;
+        align-items:     flex-end;
+        justify-content: flex-start;
+    }
+    /*--------------------------------------------*/
+
+    &__article--as-drinks-container-configured{
+        display: flex;
+        align-items:     flex-end;
+        justify-content: flex-end;
+
+        text-align: right;
+    }
+    /***************************************************/
+
+    /*---------------view-gallery-meals-button-----------------------------*/
+
+    &__view-food-gallery-button-container{
+        grid-row:    4/ span 1;
+        grid-column: 2 / span 1;
+        align-self:   stretch;
+        justify-self: stretch;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 5rem;
+    }
+    /*--------------------------------------------*/
+
+    &__view-drinks-gallery-button-container{
+        grid-row:    4/ span 1;
+        grid-column: 2 / span 1;
+        align-self:   stretch;
+        justify-self: stretch;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 5rem;
+    }
+    /*--------------------------------------------*/
+
+    &__reference{
+        font-family: "Raleway-Medium";
+        font-size: 1rem;
+        color: #f15a29;
+        background-color: white;
+        border: 0.1rem solid #f15a29;
+        cursor: pointer;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-decoration: none;
+    }
+
+    /*--------------------------------------------*/
+
+    &__view-gallery-meals-button-related-right-arrow{
+        font-size: 2rem;
+        font-family: "Aleo-Regular";
+        color: #f15a29;
+    }
+
+}
+
+
+/*******************************************************************************/
+
+/*--------------------------------------------*/
+/*-----------section__drinks-----------------*/
+/*--------------------------------------------*/
+
+.meals-description-section{
+
+    &__drinks-description-container{
+        grid-area:    drinks-article-area;
+        align-self:   stretch;
+        justify-self: stretch;
+
+        display: grid;
+
+        grid-template-rows:
+                            minmax(auto,15.27%)
+                            minmax(auto,10.27%)
+                            minmax(auto,47.5%)
+                            minmax(auto,26.94%);
+        grid-template-columns:  minmax(auto,15%)
+                                minmax(auto,70%)
+                                minmax(auto,15%);
+                                min-width: 18rem;
+    }
+
+    /*--------------------------------------------*/
+    /*------------section__vertical-duplex-img----*/
+    /*--------------------------------------------*/
+
+    &__vertical-duplex-img-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        background: white;
+        outline:        0.3rem solid #e4e5e7;
+        padding:        1.5rem;
+        /* min-height: 25rem;*/
+    }
+    /*--------------------------------------------*/
+
+    &__vertical-duplex-img-container--as-drinks-positioned{
+        grid-area: drinks-img-area;
+
+        justify-self: stretch;
+        align-self:   stretch;
+    }
+    /*--------------------------------------------*/
+}
+
+/***************************************************************************************/
+
+.vertical-duplex-img-container__part-img{
+        width: 50%;
+        height:auto;
+        min-height: 100%;
+        min-width:  50%;
+        max-width:  100%;
+
+
+    /*--------------------------------------------*/
+
+    &--as-left-img#{&}--as-happy-hour-decorated{
+        background: url("./../images/Group 7.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+
+    /*--------------------------------------------*/
+
+    &--as-right-img#{&}--as-happy-hour-decorated{
+        background: url("./../images/Group 6.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+
+}
+
+/*-----------view-gallery-meals-button-container---------------------------------*/
+
+
+/*---------------animation---------------------*/
+
+@keyframes back-pulse {
+    0%,
+    50%,
+    100% {
+        background-color: rgba(241, 100, 100, 0.75);
+        transform: skewX(20deg);
+    }
+    25%,
+    75% {
+        background-color: #f15a29;
+    }
+}
+/*--------------------------------------------*/
+
+.meals-description-container__reference:hover{
+    animation: back-pulse 1.5s infinite linear;
+    color: white;
+}
+/*--------------------------------------------*/
+
+.meals-description-container__reference:hover .meals-description-container__view-gallery-meals-button-related-right-arrow{
+    color: white;
+}
+
+/*--------------------------------------------*/

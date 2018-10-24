@@ -1,0 +1,28 @@
+
+.menu-one-page{
+    padding: 0;
+    margin:0;
+    height: /*3661px*/ auto;
+    width: /*1400px*/ 100vw;
+
+    display: grid;
+    grid-template-rows: minmax(auto, 17.31%)
+                        minmax(auto, 5.70%)
+                        minmax(auto, 31.76%)
+                        minmax(auto, 16.33%)
+                        minmax(auto, 12.04%)
+                        minmax(auto, 8.16%)
+                        minmax(auto, 8.65%);
+
+    grid-template-columns:
+                           minmax(auto, 100%);
+
+    grid-template-areas: "header"
+                         "mealtime-menubar"
+                         "meals-description"
+                         "gallery"
+                         "comments"
+                         "order"
+                         "footer";
+
+}
