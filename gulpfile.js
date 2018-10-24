@@ -5,9 +5,9 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css');
+    cssmin = require('gulp-minify-css')
     /*imageop = require('gulp-image-optimization'),*/
-    /*,imagemin = require('gulp-imagemin'),*/
+    ,imagemin = require('gulp-imagemin');
     /*pngquant = require('imagemin-pngquant');*/
 
 
@@ -46,16 +46,28 @@ gulp.task('fonts', function() {
 
 /*------------------------------------------*/
 
-gulp.task('images', function() {
+/*gulp.task('images', function() {
     gulp.src('src/images/*.*')
-      /*  .pipe(imagemin({
+        .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()],
             interlaced: true
-        }))*/
+        }))
 
         .pipe(gulp.dest('build/images'))
+});*/
+
+gulp.task('images', function () {
+    gulp.src('src/images/*.*') //Выберем наши картинки
+        .pipe(imagemin({ //Сожмем их
+            progressive: true, //сжатие .jpg
+            svgoPlugins: [{removeViewBox: false}], //сжатие .svg
+            interlaced: true, //сжатие .gif
+            optimizationLevel: 3 //степень сжатия от 0 до 7
+        }))
+        .pipe(gulp.dest('build/images')) //выгрузим в build
+
 });
 
 /*------------------------------------------*/
